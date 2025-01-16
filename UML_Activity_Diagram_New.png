@@ -1,0 +1,16 @@
+digraph UML_Activity_Diagram {
+	rankdir=TB
+	node [shape=ellipse]
+	Start [label=Start fillcolor=green shape=circle style=filled]
+	FyllInfo [label="Fyll i användaruppgifter"]
+	Validera [label="Validera information"]
+	SkapaKonto [label="Skapa konto"]
+	SkickaMail [label="Skicka bekräftelsemail"]
+	Slut [label=Slut fillcolor=red shape=circle style=filled]
+	Start -> FyllInfo
+	FyllInfo -> Validera
+	Validera -> SkapaKonto [label="Validering OK"]
+	Validera -> FyllInfo [label="Validering ej OK" style=dashed]
+	SkapaKonto -> SkickaMail
+	SkickaMail -> Slut
+}

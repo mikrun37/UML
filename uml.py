@@ -21,4 +21,5 @@ uml_activity.edge("SkapaKonto", "SkickaMail")
 uml_activity.edge("SkickaMail", "Slut")
 
 # Spara diagrammet till fil
-uml_activity.render("/mnt/data/UML_Activity_Diagram_New.png", cleanup=True)
+# Tagit bort söklvägen
+uml_activity.render("UML_Activity_Diagram_New.png", cleanup=True)
